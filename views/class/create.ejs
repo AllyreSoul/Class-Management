@@ -1,0 +1,49 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+  <style>
+      .flex-container1
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                min-height: 100%;
+                background-color: #f3d4ff;
+            }
+            .flex-container1 > div
+            {
+                font-family: 'Comfortaa', sans-serif;
+            }
+            .main-center
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                border-style: solid;
+                border-radius: 15px;
+                border-width: "2px";
+                border-color: rgba(128, 125, 240, 0.60);
+                width: 373px;
+            }
+  </style>
+</head>
+<body>
+  <div class="flex-container1">
+    <div class="main-center">
+        <form method="post" action="/class/create">
+            <div style="font-size: large; margin: 7px; text-align: center;">Create Class</div>
+            <% if (locals.error) { %>
+                <div class="error"><%= error %></div>
+            <% } %>
+            <div class="form-floating" style="margin: 7px; font-size: small;">
+                <input type="text" class="form-control" id="floatingClass" placeholder="placeholder" name="className">
+                <label for="floatingClass">Class Name</label>
+            </div>
+            <button class="w-100 btn btn-md btn-primary" style="background-color: 8C62EB; border-color: 9B4ED4; margin: 5px; max-width: 95%;" type="submit">Create Class</button>
+        </form>
+      </div>
+    </div>
+</div>
+</body>
